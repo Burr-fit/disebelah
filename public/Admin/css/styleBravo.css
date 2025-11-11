@@ -1,0 +1,283 @@
+/* Style dasar untuk nav-link */
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.menunya {
+    font-size: 14px;
+}
+
+.judulBerit_3 {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+    font-style: normal;
+    color: #131313;
+    font-weight: 500;
+}
+
+.judulBerit_3:hover {
+    color: #379778;
+}
+
+.judulBeritaRekomen {
+    font-size: 17px;
+    font-weight: 700;
+    color: #131313;
+    text-transform: capitalize;
+}
+
+.judulBeritaWB {
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.judulBeritaTerkini {
+    font-size: 15px;
+    font-weight: 700;
+    color: #131313;
+    text-transform: capitalize;
+}
+
+.judulBeritaTerkini:hover {
+    color: #379778;
+}
+
+.tagBerita {
+    font-size: 12px;
+    font-style: normal;
+}
+
+.tglBerita {
+    font-size: 12px;
+    font-style: normal;
+    color: #525151;
+}
+
+.tglBeritaWB {
+    font-size: 12px;
+    font-style: normal;
+    color: #ddcb6e;
+}
+
+.kotakgambarHeadline {
+    width: 100%;
+    height: 450px;
+}
+
+.judulheadline {
+    margin-top: -50px;
+}
+
+.judulTag {
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    color: #CC2525;
+    text-transform: uppercase;
+}
+
+.judulTagWajibBaca {
+    font-size: 20px;
+    font-weight: 700;
+    color: #EE9A36;
+    text-transform: uppercase;
+}
+
+.fotoheadelinekanan {
+    object-fit: cover;
+    width: 85px;
+    height: 80px;
+}
+
+.fotoBeritaTerhangat {
+    width: 100%;
+    height: 200px;
+}
+
+.fotoBeritaRekomendasi_1 {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/*hover images*/
+.image-hover-zoom {
+    overflow: hidden;
+    /* Penting agar gambar tidak keluar dari batas */
+    /* display: inline-block; */
+    border-radius: 8px;
+    /* Opsional: sudut melengkung */
+}
+
+.image-hover-zoom img {
+    transition: transform 0.5s ease;
+    display: block;
+    width: 100%;
+    /* Agar responsif */
+    height: auto;
+}
+
+.image-hover-zoom:hover img {
+    transform: scale(1.1);
+    /* Zoom 110% saat hover */
+
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.form-group:last-child {
+    margin-bottom: 0px;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.checkbox-wrapper .background {
+    fill: #2862FF;
+    transition: ease all 0.6s;
+}
+
+.checkbox-wrapper .stroke {
+    fill: none;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 2px;
+    stroke-dashoffset: 100;
+    stroke-dasharray: 100;
+    transition: ease all 0.6s;
+}
+
+.checkbox-wrapper .check {
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+    stroke-dashoffset: 22;
+    stroke-dasharray: 22;
+    transition: ease all 0.6s;
+}
+
+.checkbox-wrapper input[type=radio] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    margin: 0;
+    opacity: 0;
+    appearance: none;
+}
+
+.checkbox-wrapper input[type=radio]:hover {
+    cursor: pointer;
+}
+
+.checkbox-wrapper input[type=radio]:checked+svg .background {
+    fill: #2862FF;
+}
+
+.checkbox-wrapper input[type=radio]:checked+svg .stroke {
+    stroke-dashoffset: 0;
+}
+
+.checkbox-wrapper input[type=radio]:checked+svg .check {
+    stroke-dashoffset: 0;
+}
+
+.form-control {
+    border: none;
+    border-bottom: 1px solid #aaa;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.form-control:focus {
+    border-bottom: 1px solid #0d6efd;
+    /* warna biru Bootstrap saat fokus */
+    outline: none;
+    box-shadow: none;
+}
+
+.select2-container--default .select2-selection--single:focus,
+.select2-container--default .select2-selection--single .select2-selection__rendered:focus {
+    border-bottom: 1px solid #0d6efd !important;
+    outline: none !important;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 110px 1ch 1fr;
+    /* label | ":" | nilai */
+    row-gap: 2px;
+    align-items: center;
+    font-size: 0.95em;
+}
+
+.info-grid>div:nth-child(3n) {
+    text-align: left;
+    word-break: break-word;
+}
+
+/* Style untuk tombol expand/collapse */
+.bootstrap-table .detail-icon {
+    font-size: 24px;
+    cursor: pointer;
+    /* background-color: orange; */
+    color: #fff;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.bootstrap-table .detail-icon.bi-plus-square {
+    color: #198754;
+    /* hijau untuk expand */
+}
+
+.bootstrap-table .detail-icon.bi-dash-square {
+    color: #dc3545;
+    /* merah untuk collapse */
+}
+
+.bootstrap-table .detail-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Style untuk refresh */
+.bootstrap-table .fixed-table-toolbar .bi-arrow-clockwise {
+    font-size: 24px;
+    color: #0d6efd;
+    transition: transform 0.3s ease-in-out;
+}
+
+.bootstrap-table .fixed-table-toolbar .bi-arrow-clockwise:hover {
+    color: #198754;
+    transform: rotate(180deg);
+}
+
+.fotoDetailDewan {
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+
+}
