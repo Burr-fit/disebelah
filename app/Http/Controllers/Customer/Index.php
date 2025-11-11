@@ -11,8 +11,46 @@ class Index extends Controller
 {
     public function HalamanUtama()
     {
-        try {            
+        try {
             return view('Customer/Page/HalamanUtama', [
+                'Page'             => '',
+                'Gambar'           => '',
+
+            ]);
+        } catch (\Throwable $e) {
+            Log::channel('daily_custom')->error(
+                __FILE__ . ' | ' . __FUNCTION__ . ' | ' . $e->getMessage()
+            );
+
+            return view('DPRD/page/500', [
+                'Page'              => '500',
+            ]);
+        }
+    }
+
+    public function Produk()
+    {
+        try {
+            return view('Customer/Page/Produk', [
+                'Page'             => '',
+                'Gambar'           => '',
+
+            ]);
+        } catch (\Throwable $e) {
+            Log::channel('daily_custom')->error(
+                __FILE__ . ' | ' . __FUNCTION__ . ' | ' . $e->getMessage()
+            );
+
+            return view('DPRD/page/500', [
+                'Page'              => '500',
+            ]);
+        }
+    }
+
+    public function Produkid($id)
+    {
+        try {
+            return view('Customer/Page/Produk', [
                 'Page'             => '',
                 'Gambar'           => '',
 

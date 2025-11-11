@@ -550,7 +550,6 @@ $(document).ready(function () {
     $("#modalAdd").on("hidden.bs.modal", function () {
         const previewContainer = document.getElementById("preview-container");
         previewContainer.innerHTML = "";
-        // kembalikan default image
         const img = document.createElement("img");
         img.id = "preview-file";
         img.src = defaultImageURL;

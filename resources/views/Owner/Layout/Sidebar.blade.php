@@ -28,7 +28,7 @@
         </li>
 
         <li>
-            <a href="{{ url('/Owner/Dashboard') }}" class="tp-link">
+            <a href="{{ url('/Owner/Tempat') }}" class="tp-link">
                 <i data-feather="layout"></i>
                 <span> Tempat </span>
             </a>
