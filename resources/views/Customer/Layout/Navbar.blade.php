@@ -36,7 +36,7 @@
                                         <i class="ri-heart-line"></i>
                                     </a>
                                 </li>
-                                <li class="onhover-dropdown mobile-account">
+                                <li class="onhover-dropdown mobile-account" id="accountMenu">
                                     <i class="ri-user-line"></i>
                                 </li>
                             </ul>
@@ -71,3 +71,25 @@
         </div>
 </header>
 <!-- top header end -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const accountMenu = document.getElementById("accountMenu");
+
+        // Ambil status login dari localStorage
+        const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+        const userPicture = localStorage.getItem("userPicture");
+        const userName = localStorage.getItem("userName");
+
+        if (isLoggedIn && userPicture) {
+            accountMenu.innerHTML = `
+                <img src="${userPicture}" alt="${userName}" 
+                     class="rounded-circle border border-2" 
+                     width="35" height="35" 
+                     style="object-fit:cover;">
+            `;
+        } else {
+            accountMenu.innerHTML = `<i class="ri-user-line"></i>`;
+        }
+    });
+</script>

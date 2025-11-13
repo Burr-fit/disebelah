@@ -10,4 +10,5 @@ Route::prefix('/')->group(function () {
     Route::get('/', [Index::class, 'HalamanUtama']);
     Route::get('Order', [Index::class, 'Produk']);
     Route::get('Order/{id}', [Index::class, 'Produkid']);
+    Route::post('google-login', [Index::class, 'googleLogin']);
 });

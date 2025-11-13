@@ -20,4 +20,10 @@ class KatagoriProduks extends Model
         'updated_at',
         'updated_by',
     ];
+
+    public function produks()
+    {
+        return $this->hasMany(Produks::class, 'idKatagori', 'idKatagori');
+    }
+
 }

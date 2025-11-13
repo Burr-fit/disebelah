@@ -41,6 +41,36 @@
         .cart_qty_cls.bump {
             transform: scale(1.3);
         }
+
+        .basic-product .img-wrapper {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            background-color: #f8f8f8;
+        }
+
+        .basic-product .img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .basic-product .img-wrapper:hover img {
+            transform: scale(1.05);
+        }
+
+        .cart-product .media img {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 8px;
+            background-color: #f8f8f8;
+        }
     </style>
 
 
@@ -109,34 +139,6 @@
             document.getElementById("search-overlay").style.display = "none";
         }
     </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const cartQtyEl = document.querySelector(".cart_qty_cls");
-            const addToCartButtons = document.querySelectorAll(".cart-info button[title='Add to cart']");
-            const cartCanvas = document.querySelector("#cartOffcanvas");
-
-            // Ambil qty awal dari localStorage (biar gak reset tiap reload)
-            let cartQty = parseInt(localStorage.getItem("cartQty")) || 0;
-            cartQtyEl.textContent = cartQty > 0 ? cartQty : 0;
-
-            addToCartButtons.forEach(btn => {
-                btn.addEventListener("click", function() {
-                    // Tambah qty
-                    cartQty++;
-                    cartQtyEl.textContent = cartQty;
-
-                    // Simpan ke localStorage
-                    localStorage.setItem("cartQty", cartQty);
-                    // Animasi kecil biar keliatan interaktif
-                    cartQtyEl.classList.add("bump");
-                    setTimeout(() => cartQtyEl.classList.remove("bump"), 300);
-                });
-            });
-        });
-    </script>
-
-
 </body>
 
 </html>
